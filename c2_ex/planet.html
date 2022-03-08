@@ -2,6 +2,14 @@
 <head>
 	<meta charset="utf-8">
 	<title>행성</title>
+	<script>
+		window.onload = init;
+		function init(){
+			var planet = document.getElementsById("greenplanet");
+			//id가 greenplanet인 <p> 요소를 가져다가 그 내용을 변경
+			planet.innerHTML = "적색경보: 광선총에 맞았음!";
+		}
+	</script>
 </head>
 <body>
 	<h1>녹색 행성</h1>
