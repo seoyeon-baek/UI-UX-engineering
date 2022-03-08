@@ -6,23 +6,29 @@
 window.onload = showTemps;
 
 function showTemps() {
-	var tempByHour = new Array();
-	tempByHour[0] = 59.2;
-	tempByHour[1] = 60.1;
-	tempByHour[2] = 63;
-	tempByHour[3] = 65;
-	tempByHour[4] = 62;
+	var tempByHour = [23,22,21,20,18,17,15,12];
 
 	for (var i = 0; i < tempByHour.length; i++) {
 		var theTemp = tempByHour[i];
 		var id = "temp" + i;
+		
+		
+
 		var lia = document.getElementById(id);
 		if (i == 0) {
 			lia.innerHTML = "정오의 기온은 " + theTemp + "도였습니다.";
 		} else {
 			lia.innerHTML = "오후 " + i + "시의 기온은 " + theTemp + "도였습니다.";
 		}
+
+		var sum = 0;
+		sum = sum+i;
+		sum = sum+theTemp;
+		avg = sum/theTemp.length;
+		var span = document.querySelector('span');
+		span.innerHTML = "평균 기온은"+ avg +"입니다.";
 	}
+
 }
 </script>
 </head>
@@ -34,7 +40,11 @@ function showTemps() {
 	<li id="temp2"></li>
 	<li id="temp3"></li>
 	<li id="temp4"></li>
+	<li id="temp5"></li>
+	<li id="temp6"></li>
+	<li id="temp7"></li>
 </ul>
+<span>평균 기온은  입니다.</span>
 </body>
 </html>
 
