@@ -7,13 +7,12 @@ window.onload = showTemps;
 
 function showTemps() {
 	var tempByHour = [23,22,21,20,18,17,15,12];
+	var sumTemp=0;
+	var aveTemp=0;
 
 	for (var i = 0; i < tempByHour.length; i++) {
 		var theTemp = tempByHour[i];
 		var id = "temp" + i;
-		
-		
-
 		var lia = document.getElementById(id);
 		if (i == 0) {
 			lia.innerHTML = "정오의 기온은 " + theTemp + "도였습니다.";
@@ -21,13 +20,18 @@ function showTemps() {
 			lia.innerHTML = "오후 " + i + "시의 기온은 " + theTemp + "도였습니다.";
 		}
 
-		var sum = 0;
-		sum = sum+i;
-		sum = sum+theTemp;
-		avg = sum/theTemp.length;
-		var span = document.querySelector('span');
-		span.innerHTML = "평균 기온은"+ avg +"입니다.";
+		sumTemp = sumTemp+tempByHour[i];
+
+		// var sum = 0;
+		// sum = sum+i;
+		// sum = sum+theTemp;
+		// avg = sum/theTemp.length;
+		// var span = document.querySelector('span');
+		// span.innerHTML = "평균 기온은"+ avg +"입니다.";
 	}
+
+	abeTemp = sumTemp/tempByHour.length;
+	output.innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp평균기온은 " + aveTemp + "입니다.";
 
 }
 </script>
