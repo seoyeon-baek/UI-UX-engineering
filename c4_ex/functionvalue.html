@@ -9,7 +9,13 @@
   	return age*7;
   } 
   // 추가 함수호출 및 할당 1
-  
+  var myDogsAge = dogsAge(4);
+  function rectangleArea(width, height){
+	  var area = width * height
+	  return area;
+  }
+  var rectArea = rectangleArea(3,4);
+
   function rectangleArea(width, height){
   	var area = width * height
   	return area;
@@ -24,6 +30,7 @@
   	return total;
   }
   // 추가 함수호출 및 할당 3
+  var theTotal = addUp([1,3,5,9]);
   
   function getAvatar(points){
   	var avatar;
@@ -37,8 +44,12 @@
   	return avatar;
   }
   // 추가 함수호출 및 할당 4
-  
-  
+  var myAvatar = getAvatar(335);
+
+  document.write("myDogsAge = " + myDogsAge + "<p>");
+  document.write("rectArea = " + rectArea + "<p>");
+  document.write("theTotal = " + theTotal + "<p>");
+  document.write("myAvatar = " + myAvatar + "<p>");
   //추가 출력 5
 
  
