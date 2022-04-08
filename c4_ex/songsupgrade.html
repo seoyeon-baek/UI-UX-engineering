@@ -1,0 +1,48 @@
+<!doctype html>
+<head>
+<meta charset="utf-8">
+<title>곡 제시 프로그램</title>
+<script>
+	if(num == ""){
+		alert("노래를 입력하세요");
+		var num = prompt("좋아하는 노래의 단어를 입력하세요: ","봄봄봄");
+	}
+
+
+var songs = [
+    "봄봄봄",
+    "짝사랑",
+    "론리론리",
+    "구데타",
+    "냐냐냐"
+];
+function suggestSong() {
+ //추가 1 함수만들기
+ var index = Math.floor(Math.random() * songs.length);
+   	 document.write("<p>총"+songs.length+" 곡이 준비되어있습니다.");
+	document.write("<p>"+(index+1)+" 번째 곡");
+	var suggestion = songs[index];
+    	return suggestion;
+}
+var song = suggestSong();
+document.write("오늘의 추천곡은 "+song+" 입니다.");
+
+function searchForSong(word){
+    var song = suggestSong();
+    for(var i =0; i<songs.length; i++){
+        song = songs [i];
+        if(songs[i].indexOf(word)>=0){
+            return song+" 곡이 있습니다";
+        }
+    }
+    return "없는 곡입니다."
+}
+
+var matchedSong = searchForSong("num");
+document.write("<p>"+matchedSong);
+
+</script>
+</head>
+<body>
+</body>
+</html>

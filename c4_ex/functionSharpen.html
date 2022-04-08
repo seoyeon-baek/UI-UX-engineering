@@ -40,16 +40,16 @@ var myAvatar = getAvatar(335);
 
 // 추가 변수에 함수 할당 1
 
-
-
-
-
-
+window.onload = outputResults;
+function outputResults(){
+	var output = document.getElementById("output");
+	output.innerHTML = "강아지 나이: " + myDogsAge + "<br>사각형면적: " + rectArea+ "<br>합계: " + theTotal + "<br>내 아바타: " + myAvatar;
+}"?///////'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''"
 </script>
 </head>
 <body>
 
 <!--  추가 표시할 영역 2 -->
-
+<div id="output"></div>
 </body>
 </html>
